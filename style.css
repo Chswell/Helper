@@ -8,3 +8,21 @@
     text-align: center;
     margin: 0 auto;
 }
+
+.form_ticket {
+    width: 500px;
+}
+
+
+th, td {
+    padding: 10px;
+
+}
+
+th {
+    background-color: #888;
+}
+
+td {
+    background-color: #ccc;
+}
