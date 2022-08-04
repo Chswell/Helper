@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&family=Poiret+One&family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Cormorant+SC:wght@300&family=Poiret+One&family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
+
+.auth {
+    width: 400px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
