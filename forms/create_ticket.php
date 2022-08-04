@@ -19,6 +19,6 @@
 
 
 
-	mysqli_query($connect, "INSERT INTO `tickets` (`id`, `name`, `cause`, `cabinet`, `discription`, `status`, `time`) VALUES (NULL, '$name', '$cause_name', '$cabinet', '$discription', '$status', NOW());");
+	mysqli_query($connect, "INSERT INTO `tickets` (`id`, `name`, `cause`, `cabinet`, `discription`, `status`, `time`) VALUES (NULL, '$name', '$cause', '$cabinet', '$discription', '$status', NOW());");
 
 	header('Location: /profile.php');

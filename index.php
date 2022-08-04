@@ -1,3 +1,11 @@
+<?php 
+	session_start();
+	require_once 'auth/connect.php';
+	if ($_SESSION['user']) {
+		header('Location: profile.php');
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
