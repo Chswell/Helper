@@ -7,7 +7,6 @@
 	$cause = $_POST['cause'];
 	$cabinet = $_POST['cabinet'];
 	$discription = $_POST['discription'];
-	$status = $_POST['status'];
 
 	if ($cause == 1) {
 		$cause = 'Картридж';
@@ -19,6 +18,6 @@
 
 
 
-	mysqli_query($connect, "INSERT INTO `tickets` (`id`, `name`, `cause`, `cabinet`, `discription`, `status`, `time`) VALUES (NULL, '$name', '$cause', '$cabinet', '$discription', '$status', NOW());");
+	mysqli_query($connect, "INSERT INTO `tickets` (`id`, `name`, `cause`, `cabinet`, `discription`, `time`) VALUES (NULL, '$name', '$cause', '$cabinet', '$discription', '$date');");
 
 	header('Location: /profile.php');

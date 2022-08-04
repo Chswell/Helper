@@ -18,6 +18,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	
 	<title>Helper</title>
 </head>
 <body>
@@ -30,7 +32,7 @@
 	    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 	      <div class="navbar-nav">
 	        <a class="nav-link active" aria-current="page" href="profile.php">Главная</a>
-	        <a class="nav-link" href="#">Статисты</a>
+	        <a class="nav-link" href="#">Стат.отдел</a>
 	        <a class="nav-link" href="#">Общая информация</a>
 	        <a class="nav-link" href="#">Новости</a>
 	        <a class="nav-link position-absolute top-50 end-0 translate-middle-y" href="auth/logout.php" style="padding-right: 50px;">Выход</a>
@@ -39,17 +41,25 @@
 	  </div>
 	</nav>
 	<div class="container">
+		<div class="modelImg" id="model-1"> <!-- id идентефикатор нужного изображения выбраного в селекте  -->
+				  <img  src="image/ML2160.jpg" alt="Модель 1" /></div>
+				<div class="modelImg"  id="model-2">
+				  <img src="image/b210.jpg" alt="Модель 2" />
+				</div>
+				<div class="modelImg"  id="model-3">
+				  <img src="image/phaser3020.jpg" alt="Модель 3" />
+				</div>
 		<div class="form_ticket" style="margin: 0 auto 50px auto;">
 			<form action="forms/create_ticket.php" method="post">
 			  <div class="mb-3 me-6">
 			  	<label><h3>Создание заявки</h3></label>
 			  	<br>
 			  	<label>Принтер</label>
-			    <select class="form-select" aria-label="Default select example" name="name">
+			    <select id="printer" class="model form-select" aria-label="Default select example" name="name">
 				  <option selected disabled>Выберите принтер из списка</option>
-				  <option value="1">One</option>
-				  <option value="2">Two</option>
-				  <option value="3">Three</option>
+				  <option data="#model-1" value="1">Sumsung ML-2160</option>
+				  <option data="#model-2" value="2">Xerox B210</option>
+				  <option data="#model-3" value="3">Xerox Phaser 3020</option>
 				</select>
 			  </div>
 			  <div class="mb-3">
@@ -105,7 +115,16 @@
 
 		</table>
 	</div>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+					$(function() {
+						$(".model").change(function(){ //При изменении модели
+							var img_id = $(".model").children("option:selected").attr("data"); // Получаем значение атрибута блока с изображением модели автомобиля который нужно показать на изображении
+					      $(".modelImg").fadeOut(1); // прячем все блоки с изображением автомобилей
+					      $(img_id).fadeIn(10); // показываем нужный блок с изображением автомобиля
+						});
+					});
+				</script>
 	<script src='js/tablesort.min.js'></script>
 	<script src='js/tablesort.number.js'></script>
 	<script src='js/tablesort.date.js'></script>

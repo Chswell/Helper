@@ -40,7 +40,7 @@
 	</nav>
 	<div class="container">
 		<div class="form_ticket" style="margin: 0 auto 50px auto;">
-			<form action="update.php" method="post">
+			<form action="update_ticket_admin.php" method="post">
 			  <div class="mb-3 me-6">
 			  	<label><h3>Изменение заявки</h3></label>
 			  	<input type="hidden" name="id" value="<?= $ticket['id']?>">
@@ -111,7 +111,18 @@
 						  <option value="1">Картридж</option>
 						  <option value="2">Принтер</option>
 						</select>
-			  	<?php	} 
+			  	<?php	}
+			  			if($_SESSION['user']['login'] === 'admin') {
+			  				?>
+			  				<label>Статус</label>
+			  				<select class="form-select" aria-label="Default select example" name="status">
+							  <option selected disabled>Статус</option>
+							  <option value="1">Отправлено</option>
+							  <option value="2">На рассмотрении</option>
+							  <option value="3">Готово</option>
+							</select>
+						<?php 
+			  			}
 			  	?>
 			    
 			  </div>

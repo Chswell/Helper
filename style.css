@@ -61,5 +61,14 @@ th[role=columnheader]:not(.no-sort):hover:after {
     opacity: 1;
 }
 
+.modelImg {
+  display: none;
+  
+  }
 
-
+.modelImg > img {
+    width: 200px;
+    height: auto;
+    margin-top: 50px;
+    position: absolute;;
+}
