@@ -40,47 +40,61 @@
 	</nav>
 	<div class="container">
 		<div class="form_ticket" style="margin: 0 auto 50px auto;">
-			<form action="update.php" method="post">
+			<form action="update_ticket.php" method="post">
 			  <div class="mb-3 me-6">
 			  	<label><h3>Изменение заявки</h3></label>
 			  	<input type="hidden" name="id" value="<?= $ticket['id']?>">
 			  	<?php
-			  		if($ticket['name'] == 1) {
+			  		if($ticket['name'] == 1 || $ticket['name'] == 'Sumsung ML-2160') {
 			  	?>
 			  			<br><label>Принтер</label>
 			  		    <select class="form-select" aria-label="Default select example" name="name">
 							<option disabled>Выберите принтер из списка</option>
-							<option selected value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
+							<option selected value="1">Sumsung ML-2160</option>
+							<option value="2">Xerox B210</option>
+							<option value="3">Xerox Phaser 3020</option>
+							<option value="4">Другой принтер</option>
 						</select>
 				<?php }
 				
-			  		  elseif ($ticket['name'] == 2) {
+			  		  elseif ($ticket['name'] == 2 || $ticket['name'] == 'Xerox B210') {
 			  	?>		<label>Принтер</label>
 			  			<select class="form-select" aria-label="Default select example" name="name">
 						  <option disabled>Выберите принтер из списка</option>
-						  <option value="1">One</option>
-						  <option selected value="2">Two</option>
-						  <option value="3">Three</option>
+						  <option value="1">Sumsung ML-2160</option>
+						  <option selected value="2">Xerox B210</option>
+						  <option value="3">Xerox Phaser 3020</option>
+						  <option value="4">Другой принтер</option>
 						</select>
 				<?php }		
-			  		 elseif ($ticket['name'] == 3) {
+			  		 elseif ($ticket['name'] == 3 || $ticket['name'] == 'Xerox Phaser 3020') {
 			  	?>		<label>Принтер</label>
 			  			<select class="form-select" aria-label="Default select example" name="name">
 						  <option disabled>Выберите принтер из списка</option>
-						  <option value="1">One</option>
-						  <option value="2">Two</option>
-						  <option selected value="3">Three</option>
+						  <option value="1">Sumsung ML-2160</option>
+						  <option value="2">Xerox B210</option>
+						  <option selected value="3">Xerox Phaser 3020</option>
+						  <option value="4">Другой принтер</option>
 						</select>
-			  	<?php } elseif($ticket['name'] == 0) {
+				<?php } elseif($ticket['name'] == 4 || $ticket['name'] == 'Другой принтер') {
+			  	?>
+			  			<br><label>Принтер</label>
+			  		    <select class="form-select" aria-label="Default select example" name="name">
+							<option disabled>Выберите принтер из списка</option>
+							<option value="1">Sumsung ML-2160</option>
+							<option value="2">Xerox B210</option>
+							<option value="3">Xerox Phaser 3020</option>
+							<option selected value="4">Другой принтер</option>
+						</select>
+			  	<?php } elseif($ticket['name'] == 0 || $ticket['name'] == '') {
 			  	?>
 			  			<br><label>Принтер</label>
 			  		    <select class="form-select" aria-label="Default select example" name="name">
 							<option selected disabled>Выберите принтер из списка</option>
-							<option value="1">One</option>
-							<option value="2">Two</option>
-							<option value="3">Three</option>
+							<option value="1">Sumsung ML-2160</option>
+							<option value="2">Xerox B210</option>
+							<option value="3">Xerox Phaser 3020</option>
+							<option value="4">Другой принтер</option>
 						</select>
 				<?php }
 			  	?>

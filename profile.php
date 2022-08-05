@@ -4,7 +4,6 @@
 	if (!$_SESSION['user']) {
 		header('Location: index.php');
 	}
-	
 ?>
 
 <!DOCTYPE html>
@@ -40,8 +39,7 @@
 	    </div>
 	  </div>
 	</nav>
-	<div class="container">
-		<div class="modelImg" id="model-1"> <!-- id идентефикатор нужного изображения выбраного в селекте  -->
+	<div class="modelImg" id="model-1"> <!-- id идентефикатор нужного изображения выбраного в селекте  -->
 				  <img  src="image/ML2160.jpg" alt="Модель 1" /></div>
 				<div class="modelImg"  id="model-2">
 				  <img src="image/b210.jpg" alt="Модель 2" />
@@ -49,6 +47,7 @@
 				<div class="modelImg"  id="model-3">
 				  <img src="image/phaser3020.jpg" alt="Модель 3" />
 				</div>
+	<div class="container">
 		<div class="form_ticket" style="margin: 0 auto 50px auto;">
 			<form action="forms/create_ticket.php" method="post">
 			  <div class="mb-3 me-6">
@@ -60,6 +59,7 @@
 				  <option data="#model-1" value="1">Sumsung ML-2160</option>
 				  <option data="#model-2" value="2">Xerox B210</option>
 				  <option data="#model-3" value="3">Xerox Phaser 3020</option>
+				  <option data="#model-4" value="4">Другой принтер</option>
 				</select>
 			  </div>
 			  <div class="mb-3">
@@ -106,7 +106,7 @@
 						<td><?= $ticket[4]?></td>
 						<td><?= $ticket[5]?></td>
 						<td><?= $ticket[6]?></td>
-						<td><a href="forms/update_ticket.php?id=<?= $ticket[0]?>">Изменить</a></td>
+						<td><a href="forms/update.php?id=<?= $ticket[0]?>">Изменить</a></td>
 						
 					</tr>
 			<?php

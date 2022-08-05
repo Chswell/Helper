@@ -17,6 +17,16 @@
 		$cause = '';
 	}
 
+	if ($name == 1) {
+		$name = 'Sumsung ML-2160';
+	} elseif ($name == 2) {
+		$name = 'Xerox B210';
+	} elseif ($name == 3) {
+		$name = 'Xerox Phaser 3020';
+	} elseif ($name == 4) {
+		$name = 'Другой принтер';
+	}
+
 	mysqli_query($connect, "UPDATE `tickets` SET `name` = '$name', `cause` = '$cause', `cabinet` = '$cabinet', `status` = '$status' , `time` = '$date', `discription` = '$discription' WHERE `tickets`.`id` = '$id'");
 
 	header('Location: /profile.php');

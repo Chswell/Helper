@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	require_once 'auth/connect.php';
-	if ($_SESSION['user']['login'] == 'user') {
+	if ($_SESSION['user']['role'] == 'user') {
 		die('Незя так делать');
 		header('Location: profile.php');
 	}

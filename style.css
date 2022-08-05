@@ -69,6 +69,7 @@ th[role=columnheader]:not(.no-sort):hover:after {
 .modelImg > img {
     width: 200px;
     height: auto;
-    margin-top: 50px;
+    margin: 50px 50px 0 50px;
     position: absolute;;
+
 }
