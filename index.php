@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Helper</title>
+	<title>ГКБ 11</title>
 </head>
 <body>
 	<div class="container">

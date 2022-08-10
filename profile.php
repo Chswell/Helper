@@ -19,7 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	
-	<title>Helper</title>
+	<title>ГКБ 11</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
